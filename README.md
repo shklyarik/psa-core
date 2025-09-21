@@ -7,8 +7,9 @@ This is a very lightweight PHP framework aimed at maximum performance and resour
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-(new \app\lib\web\App(
-    di: new Psa\Base\Container(require_once __DIR__ . '/config/web.php')
+new Psa\Core\Web\App(
+    di: new Psa\Core\Common\Container(require_once __DIR__ . '/../src/Config/web.php'),
+    router: new Psa\Core\Web\Router(require_once __DIR__ . '/../src/Config/routes.php')
 )->run();
 
 ```
