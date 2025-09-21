@@ -1,6 +1,6 @@
 <?php
 
-namespace Psa\Base\Common;
+namespace Psa\Core\Common;
 
 use InvalidArgumentException;
 use ReflectionClass;

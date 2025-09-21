@@ -1,8 +1,8 @@
 <?php
 
-namespace Psa\Base\Web;
+namespace Psa\Core\Web;
 
-use Psa\Base\Common\Container;
+use Psa\Core\Common\Container;
 
 class App
 {

@@ -1,11 +1,11 @@
 {
-    "name": "shklyarik/base",
+    "name": "shklyarik/psa-core",
     "description": "Light php framework",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Psa\\Base\\": "src/"
+            "Psa\\Core\\": "src/"
         }
     },
     "authors": [

@@ -1,8 +1,8 @@
 <?php
 
-namespace Psa\Base\Cli;
+namespace Psa\Core\Cli;
 
-use Psa\Base\Common\Container;
+use Psa\Core\Common\Container;
 
 class App
 {
