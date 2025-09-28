@@ -119,4 +119,23 @@ class Container
 
         return $reflector->newInstanceArgs($dependencies);
     }
+
+    /**
+     * Check if container can provide a service.
+     *
+     * @param string $id Service identifier or class name.
+     * @return bool
+     */
+    public function has(string $id): bool
+    {
+        if (isset($this->instances[$id])) {
+            return true;
+        }
+
+        if (isset($this->config[$id])) {
+            return true;
+        }
+
+        return false;
+    }
 }
