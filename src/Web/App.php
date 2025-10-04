@@ -48,9 +48,4 @@ class App
             echo $result;
         }
     }
-
-    public function run()
-    {
-        $this->router->run();
-    }
 }

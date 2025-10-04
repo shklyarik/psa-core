@@ -5,7 +5,7 @@ namespace Psa\Core\Cli;
 class Dispatcher
 {
     private array $args = [];
-    private string $name;
+    private string $name = 'help';
 
     public function __construct(
         protected array $commands
