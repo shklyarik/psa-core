@@ -5,9 +5,12 @@ namespace Psa\Core\Web;
 use Psa\Core\Common\Container;
 use RuntimeException;
 use ReflectionMethod;
+use Psa\Core\Common\AppTrait;
 
 class App
 {
+    use AppTrait;
+
     public function __construct(
         protected array $alias,
         protected Container $di,
