@@ -6,6 +6,7 @@ use Psa\Core\Common\Container;
 use RuntimeException;
 use ReflectionMethod;
 use Psa\Core\Common\AppTrait;
+use Psa\Core\Common\View;
 
 class App
 {
@@ -47,6 +48,9 @@ class App
         if (is_array($result) || is_null($result)) {
             header('Content-Type: application/json');
             echo json_encode($result, JSON_UNESCAPED_UNICODE);
+        } else if ($result instanceof View) {
+            header('Content-Type: text/html');
+            echo $result->render();
         } else {
             echo $result;
         }
