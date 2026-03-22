@@ -45,7 +45,7 @@ class App
 
         $result = $refMethod->invokeArgs($action, $args);
 
-        if (is_array($result) || is_null($result)) {
+        if (is_array($result) || is_null($result) || $result instanceof \stdClass) {
             header('Content-Type: application/json');
             echo json_encode($result, JSON_UNESCAPED_UNICODE);
         } else if ($result instanceof View) {
